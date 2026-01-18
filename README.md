@@ -442,11 +442,6 @@ def reply():
        ]
     print(a)
 
-def fakhl():
-    w=[]
-    print(peoplex(),"is",colorx(),animalx,"in",placex())
-
-
 
 def cb_response(user_choice):
     user_choice=user_choice.lower()
@@ -504,8 +499,6 @@ def cb_response(user_choice):
         return(insq())
     elif"what can you do" in user_choice:
         return(reply())
-    elif"fake headline" in user_choice:
-        return(fakhl())
     else:
         return"Sorry!!! I didn't get it. Try again! :|"
 
