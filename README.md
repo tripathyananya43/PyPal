@@ -23,8 +23,7 @@ def arethematic_op(x):
         a=int(input("Enter the number :"))
         b=int(input("Enter the other number :"))
         c=a+b
-        return(c)
-        
+        return(c)        
     elif"subtract" in x:
         a=int(input("Enter the number :"))
         b=int(input("Enter the other number :"))
@@ -77,8 +76,7 @@ def log(x):
 
 def dicex():
     v=random.randint(1,6)
-    print(v)
-    return()
+    print(v)    
 def dice():
     while(True):
         dicex()
@@ -87,6 +85,7 @@ def dice():
             break
         else:
             continue
+    return("What's next!!!")
 
 def coinx():
     c=["Heads","Tails"]
@@ -100,7 +99,8 @@ def coin():
         if "s" in c.lower():
             break
         else:
-            continue   
+            continue 
+    return("What's next!!!")  
 
 def rpsx():
     c=["Rock","Paper","Scissors"]
@@ -114,7 +114,8 @@ def rps():
         if "s" in c.lower():
             break
         else:
-            continue    
+            continue 
+    return("What's next!!!")   
 
 def num():
     x=int(input("Enter the range :"))
@@ -129,6 +130,7 @@ def pick_a_num():
             break
         else:
             continue
+    return("What's next!!!")
 
 def animalx():
     c= [
@@ -161,7 +163,8 @@ def animals():
     while(a<=n):
         animalx()
         a+=1
-    print("Thats all! I have provided you with ", n," animals") 
+    print("Thats all! I have provided you with ", n," animals")
+    return("What's next!!!") 
 
 def colorx():
     c=[
@@ -184,7 +187,8 @@ def color():
     while(a<=n):
         colorx()
         a+=1
-    print("Thats all! I have provided you with ", n," colours")    
+    print("Thats all! I have provided you with ", n," colours") 
+    return("What's next!!!")   
 
 def peoplex():
     c=[
@@ -218,6 +222,7 @@ def people():
         peoplex()
         a+=1
     print("Thats all! I have provided you with ", n," peoples")
+    return("What's next!!!")
 
 def placex():
     c=[
@@ -252,6 +257,7 @@ def place():
         placex()
         a+=1
     print("Thats all! I have provided you with ", n," places")  
+    return("What's next!!!")
 
 def area(x):
     if "circle" in x:
@@ -313,10 +319,10 @@ def area(x):
         r=int(input("Enter the radius :"))
         h=int(input("Enter the height :"))
         a=math.pi*r*(r+h)
-        print("SurfaceArea of the cone with radius and height",r,h,"=",round(a,4) )
-    
+        print("SurfaceArea of the cone with radius and height",r,h,"=",round(a,4) )    
     else:
         print("Sorry I cannot calculate the area of the given figure. Try again!!!  :(")
+    return("What's next!!!")
 
 def perimeter(x):
     if "circle" in x:
@@ -340,6 +346,7 @@ def perimeter(x):
         print("Perimeter of the rectangle with width and length ",b,l,"respectively =",round(a,4) )
     else:
         print("Sorry I cannot calculate the perimeter of the given figure. Try again!!!  :(")
+    return("What's next!!!")
 
 def volume(x):
     if "cube" in x:
@@ -369,10 +376,10 @@ def volume(x):
         r=int(input("Enter the radius :"))
         h=int(input("Enter the height :"))
         a=(1/3)*math.pi*h*(r**2)
-        print("Volume of the cone with radius and height",r,h,"=",round(a,4) )
-    
+        print("Volume of the cone with radius and height",r,h,"=",round(a,4) )    
     else:
         print("Sorry I cannot calculate the volume of the given figure. Try again!!!  :(")
+    return("What's next!!!")
 
 def jokex():
     c=[
@@ -402,7 +409,8 @@ def jokes():
         if "s" in c.lower():
             break
         else:
-            continue   
+            continue
+    return("What's next!!!")   
 
 def insqx():
     c=["The only way to do great work is to love what you do. – Steve Jobs",
@@ -431,7 +439,8 @@ def insq():
         if "s" in c.lower():
             break
         else:
-            continue   
+            continue  
+    return("What's next!!!") 
 
 def reply():
     a=["I can tell date,time,weekday,day of year",
@@ -440,7 +449,8 @@ def reply():
        "I can also roll dice,toss coin, name animals,places, and people",
        "I can also play rock paper scissors ans tell jocks and motivational quotes"
        ]
-    print(a)
+    return(a)
+
 
 
 def cb_response(user_choice):
@@ -450,7 +460,7 @@ def cb_response(user_choice):
     elif"how are you" in user_choice:
         return"I am doing very well. Thank you for asking. :)"
     elif"who are you" in user_choice:
-        return"I am a artificial friend developed by you using python programming language.If you want to know more about me you can ask for 'what can I do'"
+        return"I am PyPal an artificial friend developed by you using python programming language.If you want to know about my functionality you can ask for 'what can I do'"
     elif"bye" in user_choice:
         return"Goodbuy! Have a nice day ! See you next time ! :)"
     elif"date" in user_choice:
@@ -479,7 +489,7 @@ def cb_response(user_choice):
         return(pick_a_num())
     elif"name some animals" in user_choice:
         return(animals())
-    elif"great!" in user_choice or "well done!" in user_choice:
+    elif"great" in user_choice or "well done" in user_choice:
         return"Thank you for your appreciation! It means a lot :)"
     elif"name some colours" in user_choice:
         return(color())
@@ -498,7 +508,9 @@ def cb_response(user_choice):
     elif"motivational" in user_choice or "inspritional" in user_choice:
         return(insq())
     elif"what can you do" in user_choice:
-        return(reply())
+        return(reply())    
+    elif"love you" in user_choice:
+        return"Love you too! :)"
     else:
         return"Sorry!!! I didn't get it. Try again! :|"
 
